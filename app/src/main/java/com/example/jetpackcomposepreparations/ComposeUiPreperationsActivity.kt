@@ -12,6 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.jetpackcomposepreparations.buttons.IconButton
 import com.example.jetpackcomposepreparations.buttons.MultiTextButton
 import com.example.jetpackcomposepreparations.buttons.SimpleButton
 import com.example.jetpackcomposepreparations.ui.theme.JetPackComposePreparationsTheme
@@ -55,7 +56,7 @@ fun columnItem(name: String) {
                 Text(text = name)
             }
             Spacer(modifier = Modifier.padding(horizontal = 20.dp))
-            MultiTextButton(context = LocalContext.current)
+            IconButton(context = LocalContext.current)
         }
 
     }

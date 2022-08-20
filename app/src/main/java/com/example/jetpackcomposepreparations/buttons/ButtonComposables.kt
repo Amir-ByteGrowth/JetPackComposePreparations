@@ -2,11 +2,18 @@ package com.example.jetpackcomposepreparations.buttons
 
 import android.content.Context
 import android.widget.Toast
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.material.Button
 import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.unit.dp
+import com.example.jetpackcomposepreparations.R
 
 // simple button
 @Composable
@@ -25,13 +32,33 @@ fun SimpleButton(context: Context) {
 // multiText button
 @Composable
 fun MultiTextButton(context: Context) {
-    Button(onClick = {
-        Toast.makeText(context, "Clicked", Toast.LENGTH_SHORT).show()
-    },
+    Button(
+        onClick = {
+            Toast.makeText(context, "Clicked", Toast.LENGTH_SHORT).show()
+        },
         colors = ButtonDefaults.buttonColors(Color.White)
 
     ) {
         Text(text = "Multi", color = Color.Green)
         Text(text = "Color", color = Color.Red)
+    }
+}
+
+// Icon button
+@Composable
+fun IconButton(context: Context) {
+    Button(
+        onClick = {
+            Toast.makeText(context, "Clicked", Toast.LENGTH_SHORT).show()
+        },
+        colors = ButtonDefaults.buttonColors(Color.White)
+
+    ) {
+        Image(
+          painter =   painterResource(id = R.drawable.ic_launcher_background),
+            contentDescription ="Cart button icon",
+            modifier = Modifier.size(40.dp).padding(end = 10.dp))
+        Text(text = "Icon Button")
+
     }
 }
