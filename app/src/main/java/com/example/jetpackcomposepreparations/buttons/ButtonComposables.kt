@@ -2,6 +2,7 @@ package com.example.jetpackcomposepreparations.buttons
 
 import android.content.Context
 import android.widget.Toast
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -93,5 +94,20 @@ fun DifferentButton(context: Context) {
         )
         Text(text = "Icon Button")
 
+    }
+}
+
+// Border of button
+@Composable
+fun BorderButton(context: Context) {
+    Button(onClick = {
+        Toast.makeText(context, "Clicked", Toast.LENGTH_SHORT).show()
+    },
+        colors = ButtonDefaults.buttonColors(Color.White),
+        border = BorderStroke(2.dp, Color.Magenta),
+        shape = RoundedCornerShape(15.dp)
+
+    ) {
+        Text(text = "Border Btn")
     }
 }
