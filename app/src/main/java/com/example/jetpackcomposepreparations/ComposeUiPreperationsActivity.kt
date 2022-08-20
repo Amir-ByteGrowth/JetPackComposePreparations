@@ -50,11 +50,11 @@ fun columnItem(name: String) {
     ) {
         Row(modifier = Modifier.padding(24.dp)) {
 
-            Column() {
+            Column(modifier = Modifier.weight(1f)) {
                 Text(text = "Hello World")
                 Text(text = name)
             }
-            Spacer(modifier = Modifier.padding(horizontal = 20.dp))
+
             ElevatedButton(context = LocalContext.current)
         }
 
