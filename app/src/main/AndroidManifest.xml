@@ -20,33 +20,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".DifferentStateSavingMethodsScreen"
-            android:exported="true"
-            android:label="@string/title_activity_different_state_saving_methods_screen"
-            android:theme="@style/Theme.JetPackComposePreparations.NoActionBar">
 
-        </activity>
-        <activity
-            android:name=".ListStateManagementActivity"
-            android:exported="true"
-            android:label="@string/title_activity_list_state_management"
-            android:theme="@style/Theme.JetPackComposePreparations.NoActionBar"></activity>
-        <activity
-            android:name=".StateMAnagementActivity"
-            android:exported="true"
-            android:label="@string/title_activity_state_management"
-            android:theme="@style/Theme.JetPackComposePreparations.NoActionBar" />
-        <activity
-            android:name=".Testing"
-            android:exported="true"
-            android:label="@string/title_activity_testing"
-            android:theme="@style/Theme.JetPackComposePreparations.NoActionBar" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.JetPackComposePreparations.NoActionBar" />
     </application>
 
 </manifest>
