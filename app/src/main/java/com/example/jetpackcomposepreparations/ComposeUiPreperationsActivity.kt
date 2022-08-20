@@ -14,6 +14,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.jetpackcomposepreparations.buttons.*
 import com.example.jetpackcomposepreparations.buttons.DifferentButton
+import com.example.jetpackcomposepreparations.composeablestates.StateColumnItem
 import com.example.jetpackcomposepreparations.ui.theme.JetPackComposePreparationsTheme
 
 class ComposeUiPreperationsActivity : ComponentActivity() {
@@ -35,7 +36,7 @@ fun columnMyApp(names: List<String> = listOf("Amir", "Rashid")) {
 
     Surface(color = MaterialTheme.colors.background, modifier = Modifier.padding(vertical = 4.dp)) {
         Column {
-            names.forEach { name -> columnItem(name = name) }
+            names.forEach { name -> StateColumnItem(name = name) }
         }
     }
 }
