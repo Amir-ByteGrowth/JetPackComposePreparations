@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">JetPackComposePreparations</string>
+    <string name="title_activity_testing">Testing</string>
+    <string name="title_activity_state_management">StateMAnagementActivity</string>
+    <string name="title_activity_list_state_management">ListStateManagementActivity</string>
+    <string name="title_activity_different_state_saving_methods_screen">
+        DifferentStateSavingMethodsScreen
+    </string>
+    <string name="title_activity_compose_ui_preperations">ComposeUiPreperationsActivity</string>
+</resources>
