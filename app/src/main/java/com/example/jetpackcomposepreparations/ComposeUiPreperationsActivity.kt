@@ -3,16 +3,16 @@ package com.example.jetpackcomposepreparations
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.*
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.jetpackcomposepreparations.buttons.SimpleButton
 import com.example.jetpackcomposepreparations.ui.theme.JetPackComposePreparationsTheme
 
 class ComposeUiPreperationsActivity : ComponentActivity() {
@@ -43,15 +43,25 @@ fun columnMyApp(names: List<String> = listOf("Amir", "Rashid")) {
 fun columnItem(name: String) {
     Surface(
         color = MaterialTheme.colors.primary,
-        modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp).fillMaxWidth()
+        modifier = Modifier
+            .padding(horizontal = 8.dp, vertical = 4.dp)
+            .fillMaxWidth()
     ) {
-        Column(modifier = Modifier.padding(24.dp)) {
-            Text(text = "Hello World")
-            Text(text = name)
+        Row(modifier = Modifier.padding(24.dp)) {
+
+            Column() {
+                Text(text = "Hello World")
+                Text(text = name)
+            }
+            Spacer(modifier = Modifier.padding(horizontal = 20.dp))
+            SimpleButton(context = LocalContext.current)
         }
 
     }
 }
+
+
+
 
 
 @Composable
@@ -74,6 +84,6 @@ fun Greeting6(name: String) {
 @Composable
 fun DefaultPreview6() {
     JetPackComposePreparationsTheme {
-        Greeting6("Android")
+        columnItem("Amir")
     }
 }
