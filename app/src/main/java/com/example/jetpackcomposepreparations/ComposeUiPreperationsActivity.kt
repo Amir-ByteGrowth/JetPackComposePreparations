@@ -55,7 +55,7 @@ fun columnItem(name: String) {
                 Text(text = name)
             }
             Spacer(modifier = Modifier.padding(horizontal = 20.dp))
-            BorderButton(context = LocalContext.current)
+            ElevatedButton(context = LocalContext.current)
         }
 
     }

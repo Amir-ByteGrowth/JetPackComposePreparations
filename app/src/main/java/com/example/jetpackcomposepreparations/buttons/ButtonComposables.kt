@@ -11,6 +11,7 @@ import androidx.compose.foundation.shape.CutCornerShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Button
 import androidx.compose.material.ButtonDefaults
+import androidx.compose.material.ButtonElevation
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -106,6 +107,21 @@ fun BorderButton(context: Context) {
         colors = ButtonDefaults.buttonColors(Color.White),
         border = BorderStroke(2.dp, Color.Magenta),
         shape = RoundedCornerShape(15.dp)
+
+    ) {
+        Text(text = "Border Btn")
+    }
+}
+
+// Elevation of button
+@Composable
+fun ElevatedButton(context: Context) {
+    Button(onClick = {
+        Toast.makeText(context, "Clicked", Toast.LENGTH_SHORT).show()
+    },
+        colors = ButtonDefaults.buttonColors(Color.White),
+        elevation = ButtonDefaults.elevation(defaultElevation = 5.dp, disabledElevation = 2.dp, pressedElevation = 10.dp)
+        
 
     ) {
         Text(text = "Border Btn")
