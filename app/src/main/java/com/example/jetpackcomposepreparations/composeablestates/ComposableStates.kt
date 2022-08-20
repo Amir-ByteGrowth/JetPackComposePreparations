@@ -22,10 +22,10 @@ fun StateColumnItem(name: String, modifier: Modifier = Modifier) {
         mutableStateOf(30.dp)
     }
 
-    if (expanded){
-        bottomPadding=30.dp
+    bottomPadding = if (expanded){
+        30.dp
     }else{
-        bottomPadding=4.dp
+        4.dp
     }
 
     Surface(
