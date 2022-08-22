@@ -7,7 +7,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
+import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
@@ -24,11 +24,25 @@ class ComposeUiPreperationsActivity : ComponentActivity() {
         setContent {
             JetPackComposePreparationsTheme {
                 // A surface container using the 'background' color from the theme
-                OnBoardingScreen()
+                StateHoistMyApp()
 
             }
         }
     }
+}
+
+@Composable
+fun StateHoistMyApp() {
+    var btnClick by remember {
+        mutableStateOf(false)
+    }
+
+    if (btnClick) {
+        columnMyApp()
+    } else {
+        OnBoardingScreen { btnClick = !btnClick }
+    }
+
 }
 
 
@@ -62,9 +76,6 @@ fun columnItem(name: String) {
 
     }
 }
-
-
-
 
 
 @Composable

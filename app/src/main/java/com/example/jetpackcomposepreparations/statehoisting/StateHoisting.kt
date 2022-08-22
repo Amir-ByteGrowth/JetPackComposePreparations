@@ -9,10 +9,11 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun OnBoardingScreen() {
+fun OnBoardingScreen(onButtonClick:() -> Unit) {
     Surface(color = MaterialTheme.colors.background) {
         Column(
             modifier = Modifier.fillMaxSize(),
@@ -21,9 +22,15 @@ fun OnBoardingScreen() {
         ) {
             Text(text = "Welcome to the basic code lab")
             Spacer(modifier = Modifier.height(10.dp))
-            Button(onClick = {}) {
+            Button(onClick = onButtonClick) {
                 Text(text = "Continue")
             }
         }
     }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun showOnBoardingScreen(){
+   OnBoardingScreen({})
 }
