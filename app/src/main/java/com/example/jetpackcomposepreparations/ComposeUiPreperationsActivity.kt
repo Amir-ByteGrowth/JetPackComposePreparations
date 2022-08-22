@@ -15,6 +15,7 @@ import androidx.compose.ui.unit.dp
 import com.example.jetpackcomposepreparations.buttons.*
 import com.example.jetpackcomposepreparations.buttons.DifferentButton
 import com.example.jetpackcomposepreparations.composeablestates.StateColumnItem
+import com.example.jetpackcomposepreparations.statehoisting.OnBoardingScreen
 import com.example.jetpackcomposepreparations.ui.theme.JetPackComposePreparationsTheme
 
 class ComposeUiPreperationsActivity : ComponentActivity() {
@@ -23,7 +24,7 @@ class ComposeUiPreperationsActivity : ComponentActivity() {
         setContent {
             JetPackComposePreparationsTheme {
                 // A surface container using the 'background' color from the theme
-                columnMyApp()
+                OnBoardingScreen()
 
             }
         }
