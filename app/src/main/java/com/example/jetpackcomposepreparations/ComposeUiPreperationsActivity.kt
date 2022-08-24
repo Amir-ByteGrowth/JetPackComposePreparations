@@ -17,6 +17,7 @@ import com.example.jetpackcomposepreparations.composeablestates.StateColumnItem
 import com.example.jetpackcomposepreparations.lazylists.lazyhorizontallist.CreateLazyHorizontalList
 import com.example.jetpackcomposepreparations.lazylists.lazyverticlelist.CreateLazyVerticalList
 import com.example.jetpackcomposepreparations.statehoisting.OnBoardingScreen
+import com.example.jetpackcomposepreparations.stylishwidgets.StylishTextView
 import com.example.jetpackcomposepreparations.ui.theme.JetPackComposePreparationsTheme
 
 class ComposeUiPreperationsActivity : ComponentActivity() {
@@ -25,7 +26,7 @@ class ComposeUiPreperationsActivity : ComponentActivity() {
         setContent {
             JetPackComposePreparationsTheme {
                 // A surface container using the 'background' color from the theme
-                CreateLazyHorizontalList()
+                StylishTextView()
 
             }
         }
