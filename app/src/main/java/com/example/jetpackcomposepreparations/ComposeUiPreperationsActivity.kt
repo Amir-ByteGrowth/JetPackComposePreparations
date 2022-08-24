@@ -13,8 +13,8 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.jetpackcomposepreparations.buttons.*
-import com.example.jetpackcomposepreparations.buttons.DifferentButton
 import com.example.jetpackcomposepreparations.composeablestates.StateColumnItem
+import com.example.jetpackcomposepreparations.lazylists.lazyverticlelist.CreateLazyVerticalList
 import com.example.jetpackcomposepreparations.statehoisting.OnBoardingScreen
 import com.example.jetpackcomposepreparations.ui.theme.JetPackComposePreparationsTheme
 
@@ -24,7 +24,7 @@ class ComposeUiPreperationsActivity : ComponentActivity() {
         setContent {
             JetPackComposePreparationsTheme {
                 // A surface container using the 'background' color from the theme
-                StateHoistMyApp()
+                CreateLazyVerticalList()
 
             }
         }
@@ -38,7 +38,7 @@ fun StateHoistMyApp() {
     }
 
     if (btnClick) {
-        columnMyApp()
+        ColumnMyApp()
     } else {
         OnBoardingScreen { btnClick = !btnClick }
     }
@@ -47,7 +47,7 @@ fun StateHoistMyApp() {
 
 
 @Composable
-fun columnMyApp(names: List<String> = listOf("Amir", "Rashid")) {
+fun ColumnMyApp(names: List<String> = listOf("Amir", "Rashid")) {
 
     Surface(color = MaterialTheme.colors.background, modifier = Modifier.padding(vertical = 4.dp)) {
         Column {
@@ -57,7 +57,7 @@ fun columnMyApp(names: List<String> = listOf("Amir", "Rashid")) {
 }
 
 @Composable
-fun columnItem(name: String) {
+fun ColumnItem(name: String) {
     Surface(
         color = MaterialTheme.colors.primary,
         modifier = Modifier
@@ -98,6 +98,6 @@ fun Greeting6(name: String) {
 @Composable
 fun DefaultPreview6() {
     JetPackComposePreparationsTheme {
-        columnItem("Amir")
+        ColumnItem("Amir")
     }
 }
