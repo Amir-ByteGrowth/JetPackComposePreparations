@@ -12,6 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.jetpackcomposepreparations.animatedlists.AnimateLazyVerticalList
 import com.example.jetpackcomposepreparations.buttons.*
 import com.example.jetpackcomposepreparations.composeablestates.StateColumnItem
 import com.example.jetpackcomposepreparations.lazylists.lazyhorizontallist.CreateLazyHorizontalList
@@ -26,7 +27,7 @@ class ComposeUiPreperationsActivity : ComponentActivity() {
         setContent {
             JetPackComposePreparationsTheme {
                 // A surface container using the 'background' color from the theme
-                StylishTextView()
+                AnimateLazyVerticalList()
 
             }
         }
