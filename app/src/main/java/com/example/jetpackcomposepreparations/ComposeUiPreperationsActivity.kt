@@ -15,6 +15,8 @@ import androidx.compose.ui.unit.dp
 import com.example.jetpackcomposepreparations.animatedlists.AnimateLazyVerticalList
 import com.example.jetpackcomposepreparations.buttons.*
 import com.example.jetpackcomposepreparations.composeablestates.StateColumnItem
+import com.example.jetpackcomposepreparations.finalproduct.CreateExpandableList
+import com.example.jetpackcomposepreparations.finalproduct.CreateOnBoardScreen
 import com.example.jetpackcomposepreparations.lazylists.lazyhorizontallist.CreateLazyHorizontalList
 import com.example.jetpackcomposepreparations.lazylists.lazyverticlelist.CreateLazyVerticalList
 import com.example.jetpackcomposepreparations.statehoisting.OnBoardingScreen
@@ -27,12 +29,23 @@ class ComposeUiPreperationsActivity : ComponentActivity() {
         setContent {
             JetPackComposePreparationsTheme {
                 // A surface container using the 'background' color from the theme
-                AnimateLazyVerticalList()
+
+                var isButtonClick by remember {
+                    mutableStateOf(false)
+                }
+
+                if (isButtonClick) {
+                    CreateExpandableList()
+                } else {
+                    CreateOnBoardScreen { isButtonClick = !isButtonClick }
+                }
+
 
             }
         }
     }
 }
+
 
 @Composable
 fun StateHoistMyApp() {
