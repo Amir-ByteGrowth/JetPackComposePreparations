@@ -3,6 +3,7 @@ package com.example.jetpackcomposepreparations.lazylists.lazyverticlelist
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material.Divider
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -28,6 +29,28 @@ fun CreateLazyVerticalList() {
             Box(modifier = Modifier.height(70.dp)) {
                 Text(
                     text = item,
+                    modifier = Modifier.padding(top = 20.dp, start = 10.dp)
+                )
+            }
+            Divider(
+                color = colorResource(id = R.color.black)
+            )
+        }
+    }
+}
+
+@Composable
+fun CreateLazyVerticalListWithIndex() {
+    LazyColumn(
+        modifier = Modifier
+            .padding(10.dp)
+            .fillMaxWidth()
+            .fillMaxHeight(), verticalArrangement = Arrangement.Center
+    ) {
+        itemsIndexed(SampleData.nameList) { index, item ->
+            Box(modifier = Modifier.height(70.dp)) {
+                Text(
+                    text = "$item  $index",
                     modifier = Modifier.padding(top = 20.dp, start = 10.dp)
                 )
             }

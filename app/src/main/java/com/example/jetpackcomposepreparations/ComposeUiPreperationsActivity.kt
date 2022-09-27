@@ -19,6 +19,7 @@ import com.example.jetpackcomposepreparations.finalproduct.CreateExpandableList
 import com.example.jetpackcomposepreparations.finalproduct.CreateOnBoardScreen
 import com.example.jetpackcomposepreparations.lazylists.lazyhorizontallist.CreateLazyHorizontalList
 import com.example.jetpackcomposepreparations.lazylists.lazyverticlelist.CreateLazyVerticalList
+import com.example.jetpackcomposepreparations.lazylists.lazyverticlelist.CreateLazyVerticalListWithIndex
 import com.example.jetpackcomposepreparations.statehoisting.OnBoardingScreen
 import com.example.jetpackcomposepreparations.stylishwidgets.StylishTextView
 import com.example.jetpackcomposepreparations.ui.theme.JetPackComposePreparationsTheme
@@ -34,12 +35,12 @@ class ComposeUiPreperationsActivity : ComponentActivity() {
                     mutableStateOf(false)
                 }
 
-                if (isButtonClick) {
-                    CreateExpandableList()
-                } else {
-                    CreateOnBoardScreen { isButtonClick = !isButtonClick }
-                }
-
+//                if (isButtonClick) {
+//                    CreateExpandableList()
+//                } else {
+//                    CreateOnBoardScreen { isButtonClick = !isButtonClick }
+//                }
+                CreateLazyVerticalListWithIndex()
 
             }
         }
