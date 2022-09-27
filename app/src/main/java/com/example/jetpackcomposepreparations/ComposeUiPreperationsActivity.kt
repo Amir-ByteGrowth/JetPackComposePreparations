@@ -40,7 +40,7 @@ class ComposeUiPreperationsActivity : ComponentActivity() {
 //                } else {
 //                    CreateOnBoardScreen { isButtonClick = !isButtonClick }
 //                }
-                CreateLazyVerticalListWithIndex()
+                CreateLazyHorizontalList()
 
             }
         }
