@@ -12,19 +12,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.jetpackcomposepreparations.animatedlists.AnimateLazyVerticalList
 import com.example.jetpackcomposepreparations.buttons.*
 import com.example.jetpackcomposepreparations.composeablestates.StateColumnItem
-import com.example.jetpackcomposepreparations.finalproduct.CreateExpandableList
-import com.example.jetpackcomposepreparations.finalproduct.CreateOnBoardScreen
-import com.example.jetpackcomposepreparations.lazylists.lazyhorizontallist.CreateLazyHorizontalList
-import com.example.jetpackcomposepreparations.lazylists.lazyverticalgrid.LazyVerticalGridDynamicSpan
-import com.example.jetpackcomposepreparations.lazylists.lazyverticalgrid.LazyVerticalGrids
-import com.example.jetpackcomposepreparations.lazylists.lazyverticlelist.CreateLazyVerticalList
-import com.example.jetpackcomposepreparations.lazylists.lazyverticlelist.CreateLazyVerticalListWithIndex
+import com.example.jetpackcomposepreparations.backdropscafold.BackdropScaffoldScreen
 import com.example.jetpackcomposepreparations.statehoisting.OnBoardingScreen
-import com.example.jetpackcomposepreparations.stylishwidgets.StylishTextView
-import com.example.jetpackcomposepreparations.tristatecheckbox.TriStateCheckBoxScreen
 import com.example.jetpackcomposepreparations.ui.theme.JetPackComposePreparationsTheme
 
 class ComposeUiPreperationsActivity : ComponentActivity() {
@@ -43,7 +34,7 @@ class ComposeUiPreperationsActivity : ComponentActivity() {
 //                } else {
 //                    CreateOnBoardScreen { isButtonClick = !isButtonClick }
 //                }
-                TriStateCheckBoxScreen()
+                BackdropScaffoldScreen()
 
             }
         }
