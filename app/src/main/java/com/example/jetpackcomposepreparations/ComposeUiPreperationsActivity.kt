@@ -18,6 +18,8 @@ import com.example.jetpackcomposepreparations.composeablestates.StateColumnItem
 import com.example.jetpackcomposepreparations.finalproduct.CreateExpandableList
 import com.example.jetpackcomposepreparations.finalproduct.CreateOnBoardScreen
 import com.example.jetpackcomposepreparations.lazylists.lazyhorizontallist.CreateLazyHorizontalList
+import com.example.jetpackcomposepreparations.lazylists.lazyverticalgrid.LazyVerticalGridDynamicSpan
+import com.example.jetpackcomposepreparations.lazylists.lazyverticalgrid.LazyVerticalGrids
 import com.example.jetpackcomposepreparations.lazylists.lazyverticlelist.CreateLazyVerticalList
 import com.example.jetpackcomposepreparations.lazylists.lazyverticlelist.CreateLazyVerticalListWithIndex
 import com.example.jetpackcomposepreparations.statehoisting.OnBoardingScreen
@@ -40,7 +42,7 @@ class ComposeUiPreperationsActivity : ComponentActivity() {
 //                } else {
 //                    CreateOnBoardScreen { isButtonClick = !isButtonClick }
 //                }
-                CreateLazyVerticalList()
+                LazyVerticalGridDynamicSpan()
 
             }
         }
