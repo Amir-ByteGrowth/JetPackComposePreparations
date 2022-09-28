@@ -24,6 +24,7 @@ import com.example.jetpackcomposepreparations.lazylists.lazyverticlelist.CreateL
 import com.example.jetpackcomposepreparations.lazylists.lazyverticlelist.CreateLazyVerticalListWithIndex
 import com.example.jetpackcomposepreparations.statehoisting.OnBoardingScreen
 import com.example.jetpackcomposepreparations.stylishwidgets.StylishTextView
+import com.example.jetpackcomposepreparations.tristatecheckbox.TriStateCheckBoxScreen
 import com.example.jetpackcomposepreparations.ui.theme.JetPackComposePreparationsTheme
 
 class ComposeUiPreperationsActivity : ComponentActivity() {
@@ -42,7 +43,7 @@ class ComposeUiPreperationsActivity : ComponentActivity() {
 //                } else {
 //                    CreateOnBoardScreen { isButtonClick = !isButtonClick }
 //                }
-                LazyVerticalGridDynamicSpan()
+                TriStateCheckBoxScreen()
 
             }
         }
