@@ -1,20 +1,24 @@
 package com.example.jetpackcomposepreparations
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import com.example.jetpackcomposepreparations.buttons.*
 import com.example.jetpackcomposepreparations.composeablestates.StateColumnItem
 import com.example.jetpackcomposepreparations.backdropscafold.BackdropScaffoldScreen
+import com.example.jetpackcomposepreparations.customdialog.CustomDialog
 import com.example.jetpackcomposepreparations.statehoisting.OnBoardingScreen
 import com.example.jetpackcomposepreparations.ui.theme.JetPackComposePreparationsTheme
 
@@ -34,11 +38,53 @@ class ComposeUiPreperationsActivity : ComponentActivity() {
 //                } else {
 //                    CreateOnBoardScreen { isButtonClick = !isButtonClick }
 //                }
-                BackdropScaffoldScreen()
+                HomePage()
 
             }
         }
     }
+}
+
+
+@Composable
+fun HomePage() {
+
+    val showDialog = remember { mutableStateOf(false) }
+
+    if (showDialog.value)
+        CustomDialog(value = "", setShowDialog = {
+            showDialog.value = it
+        }) {
+            Log.i("HomePage", "HomePage : $it")
+        }
+
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = {
+                    Text(text = "Home")
+                }
+            )
+        }, content = { paddingVal ->
+            Box(modifier = Modifier
+                .background(Color.White)
+                .padding(paddingVal)
+            ) {
+                Column(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .background(Color.White),
+                    verticalArrangement = Arrangement.Center,
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                ) {
+                    Button(onClick = {
+                        showDialog.value = true
+                    }) {
+                        Text(text = "Open Dialog")
+                    }
+                }
+            }
+        })
 }
 
 
