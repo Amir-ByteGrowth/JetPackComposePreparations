@@ -19,6 +19,7 @@ import com.example.jetpackcomposepreparations.buttons.*
 import com.example.jetpackcomposepreparations.composeablestates.StateColumnItem
 import com.example.jetpackcomposepreparations.backdropscafold.BackdropScaffoldScreen
 import com.example.jetpackcomposepreparations.customdialog.CustomDialog
+import com.example.jetpackcomposepreparations.progressindicator.linearprogress.LinearProgressIndicatorScreen
 import com.example.jetpackcomposepreparations.statehoisting.OnBoardingScreen
 import com.example.jetpackcomposepreparations.ui.theme.JetPackComposePreparationsTheme
 
@@ -38,7 +39,7 @@ class ComposeUiPreperationsActivity : ComponentActivity() {
 //                } else {
 //                    CreateOnBoardScreen { isButtonClick = !isButtonClick }
 //                }
-                HomePage()
+                LinearProgressIndicatorScreen()
 
             }
         }
